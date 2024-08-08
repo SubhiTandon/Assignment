@@ -5,12 +5,26 @@ import CustomerCard from './cards';
 
 const userslist = [
   {
-    customerId: '1',
+    user : {
     name: 'Shubham',
+    customerId: '1',
     orders: [
-      { teansaction_id: '123', productname: 'Product A', date: '2024-07-01', amount: '120' },
-      { teansaction_id: '124', productname: 'Product B', date: '2024-06-15', amount: '60' },
+      { teansaction_id: 1, amount: 120, date: "2024-07-15" , productname:"Iphone" },
+      { teansaction_id: 2, amount: 90, date: "2024-05-10" , productname:"Samsung"},
+      { teansaction_id: 3, amount: 90, date: "2024-07-25" , productname:"Iqoo" },
+      { teansaction_id: 4, amount: 90, date: "2024-06-30", productname:"Nokia" },
     ],
+  }
+  },
+  {
+    user : {
+    name: 'Amit',
+    customerId: '2',
+    orders: [
+      { teansaction_id: 6, amount: 120, date: "2024-07-15" , productname:"Iphone" },
+      { teansaction_id: 7, amount: 90, date: "2024-06-30" , productname:"Samsung"},
+    ],
+  }
   },
 ];
 
