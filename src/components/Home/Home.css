@@ -1,0 +1,35 @@
+.Home {
+    text-align: center;
+    margin: 20px;
+  }
+  
+  label {
+    font-size: 1.2em;
+    margin-right: 10px;
+  }
+  
+  input {
+    font-size: 1em;
+    padding: 5px;
+    width: 150px;
+    margin-left: 10px;
+  }
+  
+  h1 {
+    margin-bottom: 20px;
+  }
+  
+  h2 {
+    margin-top: 20px;
+    font-size: 1.5em;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  li {
+    font-size: 1.2em;
+  }
+  

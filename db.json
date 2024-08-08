@@ -1,0 +1,55 @@
+{
+"user" : [
+  {
+    "user": {
+      "name": "Shubham",
+      "customerId": 1,
+      "orders": [
+        { "teansaction_id": 1, "amount": 120, "date": "2024-07-15" , "productname":"Iphone" },
+        { "teansaction_id": 2, "amount": 190, "date": "2024-07-18" , "productname":"Samsung"},
+        { "teansaction_id": 3, "amount": 20, "date": "2024-07-10" , "productname":"Iqoo" },
+        { "teansaction_id": 4, "amount": 1620, "date": "2024-07-25", "productname":"Nokia" },
+        { "teansaction_id": 5, "amount": 10, "date": "2024-06-20" , "productname":"Ipad"},
+        { "teansaction_id": 6, "amount": 90, "date": "2024-08-01" , "productname":"Mackbook"},
+        { "teansaction_id": 7, "amount": 90, "date": "2024-05-10" ,"productname":"Dell"},
+        { "teansaction_id": 8, "amount": 90, "date": "2024-07-25" ,"productname":"Hp"},
+        { "teansaction_id": 9, "amount": 90, "date": "2024-06-30" ,"productname":"Alien ware"}
+      ]
+    }
+  },
+  {
+    "user": {
+      "name": "Amit",
+      "customerId": 2,
+      "orders": [
+        { "teansaction_id": 10, "amount": 120, "date": "2024-07-15" , "productname":"WaterBottle" },
+        { "teansaction_id": 11, "amount": 190, "date": "2024-07-18" , "productname":"Glass" },
+        { "teansaction_id": 12, "amount": 20, "date": "2024-07-10" , "productname":"Chair" },
+        { "teansaction_id": 13, "amount": 1620, "date": "2024-07-25" , "productname":"Mat" },
+        { "teansaction_id": 14, "amount": 10, "date": "2024-06-20" , "productname":"Cat Food" },
+        { "teansaction_id": 15, "amount": 90, "date": "2024-08-01" , "productname":"Toys" },
+        { "teansaction_id": 16, "amount": 90, "date": "2024-05-10" , "productname":"Bike" },
+        { "teansaction_id": 17, "amount": 90, "date": "2024-07-25" , "productname":"Car" },
+        { "teansaction_id": 18, "amount": 90, "date": "2024-06-30" , "productname":"Lamp" }
+      ]
+    }
+  },
+  {
+    "user": {
+      "name": "Ashish",
+      "customerId": 3,
+      "orders": [
+        { "teansaction_id": 19, "amount": 120, "date": "2024-07-15" , "productname":"Fruits" },
+        { "teansaction_id": 20, "amount": 129, "date": "2024-07-18" , "productname":"vagetable" },
+        { "teansaction_id": 21, "amount": 20, "date": "2024-07-10" , "productname":"Oranges" },
+        { "teansaction_id": 22, "amount": 1620, "date": "2024-07-25" , "productname":"Mango" },
+        { "teansaction_id": 23, "amount": 10, "date": "2024-06-20" , "productname":"Bags" },
+        { "teansaction_id": 24, "amount": 90, "date": "2024-08-01" , "productname":"Earphone" },
+        { "teansaction_id": 25, "amount": 90, "date": "2024-05-10" , "productname":"Keyboard" },
+        { "teansaction_id": 26, "amount": 90, "date": "2024-07-25" , "productname":"Mouse" },
+        { "teansaction_id": 27, "amount": 90, "date": "2024-06-30" , "productname":"Cable" }
+      ]
+    }
+  }
+]
+}
