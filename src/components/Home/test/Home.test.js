@@ -30,7 +30,7 @@ describe('Home Component', () => {
   test('should render CustomerCard when snackbar is not open', async () => {
     
     jest.spyOn(store, 'dispatch').mockResolvedValue({
-      payload: { status: 200, data: [{ customerId: '1', name: 'John Doe', orders: [] }] },
+      payload: { status: 200, data: [{ customerId: '1', name: 'Shubham', orders: [] }] },
     });
 
     render(
@@ -41,7 +41,7 @@ describe('Home Component', () => {
 
 
     await waitFor(() => {
-      expect(screen.getByText('Name : John Doe')).toBeInTheDocument();
+      expect(screen.getByText('Name :  Shubham')).toBeInTheDocument();
     });
   });
 
