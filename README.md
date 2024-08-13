@@ -1,70 +1,59 @@
-# Getting Started with Create React App
+# Customer Points Dashboard
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
 
-## Available Scripts
+Customer Points Dashboard is a Recat application that show points for every transaction for last three months 
 
-In the project directory, you can run:
+## 
 
-### `npm start`
+- **Customer List**: Display a list of customers with their total points.
+- **Order Details**: on click of user card it Display all user transaction list with individual points  with their total points.
+- **Monthly Points**: its display each user monthly points .
+- **Responsive Design**: The interface is userfriendly and work in various devices with different screen sizes.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Installation 
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+1. **Clone the repository**
 
-### `npm test`
+```bash git clone https://github.com/SubhiTandon/Assignment.git ```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+2. **Install dependencies**
 
-### `npm run build`
+```bash npm i / npm install```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+3. **Start the development server**
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```bash npx json-server db.json```
+```bash npm start```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+4. **Open your browser**
 
-### `npm run eject`
+Navigate to `http://localhost:3001` to view the application 
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Usage 
+The application render a list of customers. Each customer card display the following: 
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+-**Name**: The name of the customer.
+-**Total Points**: The total points earned by the customer from last three months orders.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Click on a customer card to expand and view:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+-**Order Details**: A list of all transcation is shown with points .
+-**Monthly Points**: A total summary of each months earned points .
 
-## Learn More
+## Componets 
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+-**Home**: this a main componet where all the subcomponets are render . we call all the api and send the response to  the child components  .
+-**CustomCard**: Main compoennts responsible for rendering the list of customers , their details , and points summary.
+-**`calculatepoints(amount)`**: Function to calculate points based on the order amount.
+-**`calculatepointsPerMonth(orders)`**: Function to calculate points earned per month.
+-**`getrecentOrders(orders)`**: Function to filter orders from the last three months.
+-**`groupOrdersByUser(data)`**: Function to group orders by customer.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Dependencies
 
-### Code Splitting
+-**React**: for building user interface.
+-**React Hooks**: for mapping state and effects.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
