@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import CustomCard from '../../commoncomponents/Cards';
 import Snackbar from '../../commoncomponents/Snackbar';
 import Loader from '../../commoncomponents/Loader';
+import Links from '../../commoncomponents/Links';
 
 
 function HomeScreen() {
@@ -20,7 +21,7 @@ function HomeScreen() {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await fetch("http://localhost:3000/user");
+                const response = await fetch(`${Links.baseApi}`);
                 const result = await response.json();
                 setuserList(result)
                 setcurrentCase('case3')
