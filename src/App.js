@@ -1,13 +1,15 @@
-import React, { useState } from 'react';
-import Home from "../src/components/Home/home"
-
+import React  from 'react';
+import HomeScreen from './components/Home/Home';
+import './App.css';
+import ErrorBoundary from "./commoncomponents/ErrorHandler"
 
 function App() {
-  
   return (
-    <div >
-    <Home />
-    </div>
+   
+      <ErrorBoundary>
+     <HomeScreen />
+     </ErrorBoundary>
+   
   );
 }
 

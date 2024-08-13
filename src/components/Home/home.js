@@ -1,61 +1,54 @@
-import React, { useState, useEffect } from "react";
-import "./Home.css";
-import { connect, useDispatch } from "react-redux";
-import { getuserDetails } from "../../store/Featureslices/UserDetails/userdetailsSlice";
-import { unwrapResult } from "@reduxjs/toolkit";
-import CustomerCard from "../../commoncomponents/cards";
-import  Snackbar  from "../../commoncomponents/Snackbar";
+import React, { useState, useEffect } from 'react'
+import CustomCard from '../../commoncomponents/Cards';
+import Snackbar from '../../commoncomponents/Snackbar';
+import Loader from '../../commoncomponents/Loader';
 
 
-const Home = () => {
-  const [userslist, setuserslist] = useState([]);
-  const [snackbar , setsnackbar] = useState({
-    open : false, message : "" , type : ""
-  })
-  
-  const handleSnackbarClose = () => {
-    setsnackbar({ ...snackbar, open : false})
-  }
+function HomeScreen() {
 
-  const dispatch = useDispatch();
+    const [userList, setuserList] = useState([]);
+    const [snackBar, setsnackBar] = useState({
+        open: false, message: '', type: ''
+    })
+    const [currentCase, setcurrentCase] = useState('Case1')
+    const [loading, setLoading] = useState(true)
 
-  const Userdata = async () => {
-    const data = {
-      token: "",
-    };
-    const resp = await dispatch(getuserDetails(data));
-    debugger
-    if(resp.payload.status === 404){
-      setsnackbar({open : true , message: "Please try after sometime" , type:"error"})
+    const handlesnackbarClose = () => {
+        setsnackBar({ ...snackBar, open: false })
     }
-    else {
-    const rawData = await unwrapResult(resp);
-    setuserslist(rawData);
-    }
-  };
 
-  useEffect(() => {
-    Userdata();
-  }, []);
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                const response = await fetch("http://localhost:3000/user");
+                const result = await response.json();
+                setuserList(result)
+                setcurrentCase('case3')
+            } catch (error) {
+                setsnackBar({ open: true, message: 'Please try after sometime ', type: "error" })
+                setcurrentCase('case2')
+            } finally {
+                setLoading(false)
+                setcurrentCase('case4')
+            }
+        };
+
+        fetchData()
+    }, [])
 
 
-
-  return (
-    <div className="py-12 ">
-      {!snackbar.open ? 
-        <CustomerCard
-          userslist={userslist}
+    switch (currentCase) {
+        case 'case1': return <Loader />
+        case 'case2': return <Snackbar
+            open={snackBar.open}
+            message={snackBar.message}
+            type={snackBar.type}
+            onClose={handlesnackbarClose}
         />
-        :
-        <Snackbar 
-        open={snackbar.open}
-        message={snackbar.message}
-        type={snackbar.type}
-        onClose={handleSnackbarClose}
-        /> 
-      }
-    </div>
-  );
-};
+        default:
+            return  <CustomCard userlist={userList} />
+    }
 
-export default Home;
+}
+
+export default HomeScreen
